@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     namespace 'v1' do
       resources :drivers
       resources :trucks
+      resources :trips
     end
   end
 end
