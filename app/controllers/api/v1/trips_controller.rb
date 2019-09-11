@@ -10,9 +10,9 @@ module Api
         @trip = Trip.find(params[:id]);
         @driver = @trip.driver;
         @truck = @trip.truck;
-        @routes = @trip.routes.order("time");
-        start_time = @routes.first.time.to_i;
-        end_time = @routes.last.time.to_i;
+        @routes = @trip.routes.order("arrival_time");
+        start_time = @routes.first.arrival_time.to_i;
+        end_time = @routes.last.moving_time.to_i;
 
         trip_time = (end_time - start_time);
         @trip_duration = seconds_to_units(trip_time);
@@ -30,9 +30,7 @@ module Api
           "minutes": mm,
           "seconds": ss
         }
-        
       end
-      
     end
   end
 end

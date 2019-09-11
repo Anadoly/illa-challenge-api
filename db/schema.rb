@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_08_191027) do
+ActiveRecord::Schema.define(version: 2019_09_11_111811) do
 
   create_table "drivers", force: :cascade do |t|
     t.string "name"
     t.string "license_number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "phone_number"
   end
 
   create_table "routes", force: :cascade do |t|
@@ -25,7 +26,8 @@ ActiveRecord::Schema.define(version: 2019_09_08_191027) do
     t.integer "trip_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.datetime "time"
+    t.datetime "arrival_time"
+    t.datetime "moving_time"
     t.index ["trip_id"], name: "index_routes_on_trip_id"
   end
 
