@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  truck_type: MyString
+  license_number: MyString
+
+two:
+  truck_type: MyString
+  license_number: MyString
