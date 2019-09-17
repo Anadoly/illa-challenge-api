@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_11_111811) do
+ActiveRecord::Schema.define(version: 2019_09_17_125840) do
 
   create_table "drivers", force: :cascade do |t|
     t.string "name"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2019_09_11_111811) do
 
   create_table "routes", force: :cascade do |t|
     t.decimal "lat"
-    t.decimal "long"
+    t.decimal "lng"
     t.integer "trip_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
